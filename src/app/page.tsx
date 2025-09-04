@@ -1,102 +1,113 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Clipboard, Plus } from "lucide-react";
 import Image from "next/image";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="font-sans grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-4 sm:p-8 sm:pb-20 gap-8 sm:gap-16">
+      <main className="container flex flex-col row-start-2 items-center w-full">
+        {/* Título */}
+        <h1
+          className="text-3xl sm:text-4xl font-bold text-center sm:text-left"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
+          TodoList!
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        {/* Input + Botão */}
+        <div className="flex w-full sm:w-3/5 items-center gap-2 mt-6">
+          <Input
+            type="text"
+            placeholder="Adicione uma nova tarefa..."
+            className="h-12 sm:h-14 text-lg sm:text-2xl font-normal p-3 flex-1"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          />
+          <Button
+            type="submit"
+            variant="outline"
+            className="h-12 sm:h-14 text-2xl sm:text-4xl items-center justify-center px-5 sm:px-6"
+            style={{ fontFamily: "var(--font-poppins)" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            +
+          </Button>
+        </div>
+
+        {/* Contadores */}
+        <div className="flex w-full sm:w-3/5 flex-row justify-between gap-2 mt-6 text-sm sm:text-lg">
+          <h1
+            className="font-bold text-blue-600"
+            style={{ fontFamily: "var(--font-poppins)" }}
           >
-            Read our docs
-          </a>
+            Tarefas criadas <span>0</span>
+          </h1>
+          <h1
+            className="font-bold text-purple-600"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            Tarefas concluídas <span>0</span>
+          </h1>
+        </div>
+
+        {/* Área vazia */}
+        <div className="flex w-full sm:w-3/5 flex-col items-center gap-3 sm:gap-4 border-t border-t-gray-400 pt-10 sm:pt-16 text-center">
+          <Clipboard
+            size={60}
+            color="gray"
+            className="sm:w-[82px] sm:h-[82px]"
+          />
+          <h1
+            className="text-lg sm:text-2xl font-bold text-gray-600"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            Você ainda não tem tarefas cadastradas
+          </h1>
+          <p
+            className="text-sm sm:text-lg text-gray-500"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            Crie tarefas e organize seus itens a fazer
+          </p>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+
+      {/* Footer */}
+      <footer className="row-start-3 w-full sm:w-3/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left mt-8 sm:mt-0">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          className="flex items-center justify-center gap-2 hover:underline hover:underline-offset-4"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
+          style={{ fontFamily: "var(--font-poppins)" }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          Criado com &#x2764;&#xFE0F; por Fridson Firmino
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className="flex flex-row gap-4 justify-center">
+          <a
+            target="_blank"
+            href="https://github.com/fridsonfirmino"
+            className="flex items-center gap-2 text-2xl"
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/fridson-firmino-611046225/"
+            className="flex items-center gap-2 text-2xl"
+          >
+            <FaLinkedinIn />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://www.instagram.com/firmino2f/"
+            className="flex items-center gap-2 text-2xl"
+          >
+            <FaInstagram />
+          </a>
+        </div>
       </footer>
     </div>
   );
