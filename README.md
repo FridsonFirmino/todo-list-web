@@ -8,45 +8,44 @@ Ideal para ser usado diretamente no navegador, o projeto permite ao usuário **a
 ## 🎥 Demonstração
 
 <p align="center">
-  <video alt="" title="#" src="./demo.mp4">
+  <img alt="Layout light no desktop" src="./public/demo.gif">
 </p>
 
-## Funcionalidades
+## ✨ Funcionalidades
 
-- Temas dark e light
-- Inserir tarefas
-  - Persistir Tarefas
-  - Inserção com enter
-  - Verificação de campo vazio
-- Alterar estado da tarefa
-  - Marcar como concluído
-  - Apagar tarefa
-- Multiplataforma (Responsividade)
+- ✅ Temas **dark e light**
+- ✍️ Inserir tarefas
+  - Persistência no **LocalStorage**
+  - Inserção com tecla **Enter**
+  - Validação para evitar campo vazio
+- 🔄 Alterar estado da tarefa
+  - Marcar como **concluída**
+  - **Apagar** tarefa
+- 📱 Multiplataforma (**responsivo**)
 
 ## 🎨 Layout
 
-# Desktop
+### 💻 Desktop
 
 <p align="center">
-  <img alt="" title="#" src="./todoWebDark.png">
-
-  <img alt="" title="#" src="./todoWebLight.png" >
+  <img alt="Layout dark no desktop" src="./public/todoWebDark.png">
+  <img alt="Layout light no desktop" src="./public/todoWebLight.png">
 </p>
 
-# Mobile
+### 📱 Mobile
 
 <p align="center">
-  <img alt="" title="#" src="./todoDark.png" width="200px">
-
-  <img alt="" title="#" src="./todoLigth.png" width="200px">
+  <img alt="Layout dark no mobile" src="./public/todoDark.png" width="200px">
+  <img alt="Layout light no mobile" src="./public/todoLigth.png" width="200px">
 </p>
 
 ## 🔨 Tecnologias utilizadas
 
 - [Nextjs](https://nextjs.org/)
 - [TaiwindCss](https://tailwindcss.com/)
-- [LocalStorege]
+- [LocalStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)
 - [Typescript](https://www.typescriptlang.org/)
+- [Shadcn](https://v3.shadcn.com/)
 
 ## 🚀 Instalação e uso
 
