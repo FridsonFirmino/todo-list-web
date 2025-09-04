@@ -16,7 +16,9 @@ export default function Task({
   onRead,
 }: TaskProps) {
   return (
-    <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex justify-between items-center">
+    <div
+      className={`w-full bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex justify-between items-center`}
+    >
       <div className="flex items-center gap-4">
         <input
           type="checkbox"
@@ -29,7 +31,6 @@ export default function Task({
           className={`text-gray-800 dark:text-gray-200 ${
             done ? "line-through text-gray-500" : ""
           }`}
-          style={{ fontFamily: "var(--font-poppins)" }}
         >
           {name}
         </span>

@@ -111,7 +111,7 @@ export default function Home() {
           >
             Tarefas concluídas{" "}
             <span className="bg-gray-500 px-2 rounded-full text-amber-50">
-              {tasksReadCount}
+              {tasksReadCount} de {tasksCount}
             </span>
           </h1>
         </div>
@@ -143,7 +143,7 @@ export default function Home() {
               {tasks.map((t, i) => (
                 <li
                   key={i}
-                  className="p-3 border-b border-gray-300 text-lg sm:text-xl"
+                  className="p-3 text-lg sm:text-xl"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
                   <Task
