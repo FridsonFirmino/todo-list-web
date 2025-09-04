@@ -67,7 +67,7 @@ export default function Home() {
       <main className="w-full max-w-3xl mx-auto flex flex-col items-center">
         {/* Título */}
         <h1
-          className="text-3xl sm:text-4xl font-bold text-center"
+          className="text-xl sm:text-3xl font-bold text-center"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
           TodoList
@@ -78,15 +78,20 @@ export default function Home() {
           <Input
             type="text"
             placeholder="Adicione uma nova tarefa..."
-            className="h-12 sm:h-14 text-lg sm:text-2xl font-normal p-3 flex-1"
+            className="h-10 text-base sm:h-12 sm:text-lg p-2 flex-1"
             style={{ fontFamily: "var(--font-poppins)" }}
             value={todo}
             onChange={(e) => setTodo(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                addTask();
+              }
+            }}
           />
           <Button
             type="submit"
             variant="outline"
-            className="h-12 sm:h-14 text-2xl sm:text-4xl items-center justify-center px-5 sm:px-6"
+            className="h-10 w-10 sm:h-12 sm:w-12 text-xl sm:text-2xl flex items-center justify-center"
             style={{ fontFamily: "var(--font-poppins)" }}
             onClick={addTask}
           >
@@ -95,7 +100,7 @@ export default function Home() {
         </div>
 
         {/* Contadores */}
-        <div className="flex w-full flex-row justify-between gap-2 mt-6 text-sm sm:text-lg">
+        <div className="flex w-full flex-row justify-between gap-2 mt-4 text-xs sm:text-base">
           <h1
             className="font-bold text-blue-600"
             style={{ fontFamily: "var(--font-poppins)" }}
@@ -126,13 +131,13 @@ export default function Home() {
                 className="sm:w-[82px] sm:h-[82px]"
               />
               <h1
-                className="text-lg sm:text-2xl font-bold text-gray-600"
+                className="text-base sm:text-xl font-bold text-gray-600"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
                 Você ainda não tem tarefas cadastradas
               </h1>
               <p
-                className="text-sm sm:text-lg text-gray-500"
+                className="text-xs sm:text-lg text-gray-500"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
                 Crie tarefas e organize seus itens a fazer
@@ -143,7 +148,7 @@ export default function Home() {
               {tasks.map((t, i) => (
                 <li
                   key={i}
-                  className="p-3 text-lg sm:text-xl"
+                  className="p-2 text-base sm:text-lg"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
                   <Task
