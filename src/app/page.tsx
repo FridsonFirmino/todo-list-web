@@ -119,7 +119,7 @@ export default function Home() {
         {/* Área vazia */}
         <div className="flex w-full flex-col items-center gap-3 sm:gap-4 border-t border-t-gray-400 pt-4 sm:pt-4 text-center flex-1 overflow-y-auto max-h-[60vh]">
           {tasks.length === 0 ? (
-            <>
+            <div className="flex flex-col items-center gap-3 sm:gap-4 mt-8">
               <Clipboard
                 size={60}
                 color="gray"
@@ -137,7 +137,7 @@ export default function Home() {
               >
                 Crie tarefas e organize seus itens a fazer
               </p>
-            </>
+            </div>
           ) : (
             <ul className="w-full text-left">
               {tasks.map((t, i) => (
