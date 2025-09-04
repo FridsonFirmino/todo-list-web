@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/toggleTheme";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Clipboard, Plus } from "lucide-react";
@@ -7,13 +8,16 @@ import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-4 sm:p-8 sm:pb-20 gap-8 sm:gap-16">
+      <div className="container w-full flex justify-end">
+        <ModeToggle />
+      </div>
       <main className="container flex flex-col row-start-2 items-center w-full">
         {/* Título */}
         <h1
           className="text-3xl sm:text-4xl font-bold text-center sm:text-left"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
-          TodoList!
+          TodoList
         </h1>
 
         {/* Input + Botão */}
