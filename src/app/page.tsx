@@ -1,8 +1,7 @@
 import { ModeToggle } from "@/components/toggleTheme";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Clipboard, Plus } from "lucide-react";
-import Image from "next/image";
+import { Clipboard } from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Home() {
