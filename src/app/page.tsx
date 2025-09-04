@@ -117,7 +117,7 @@ export default function Home() {
         </div>
 
         {/* Área vazia */}
-        <div className="flex w-full flex-col items-center gap-3 sm:gap-4 border-t border-t-gray-400 pt-10 sm:pt-16 text-center">
+        <div className="flex w-full flex-col items-center gap-3 sm:gap-4 border-t border-t-gray-400 pt-4 sm:pt-4 text-center flex-1 overflow-y-auto max-h-[60vh]">
           {tasks.length === 0 ? (
             <>
               <Clipboard
