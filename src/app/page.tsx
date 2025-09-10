@@ -140,7 +140,7 @@ export default function Home() {
                 className="text-xs sm:text-lg text-gray-500"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Crie tarefas e organize seus itens a fazer
+                Crie tarefas e organize seus itens por fazer
               </p>
             </div>
           ) : (
