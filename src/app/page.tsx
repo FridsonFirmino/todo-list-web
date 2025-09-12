@@ -70,7 +70,7 @@ export default function Home() {
           className="text-xl sm:text-3xl font-bold text-center"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
-          TodoList
+          Todo-List
         </h1>
 
         {/* Input + Botão */}
@@ -134,7 +134,7 @@ export default function Home() {
                 className="text-base sm:text-xl font-bold text-gray-600"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Você ainda não tem tarefas cadastradas
+                Você ainda não tem tarefas registradas
               </h1>
               <p
                 className="text-xs sm:text-lg text-gray-500"
