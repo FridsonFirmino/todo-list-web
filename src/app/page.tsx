@@ -134,7 +134,7 @@ export default function Home() {
                 className="text-base sm:text-xl font-bold text-gray-600"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Você ainda não tem tarefas registradas
+                Você ainda não adicionou nenhuma tarefa
               </h1>
               <p
                 className="text-xs sm:text-lg text-gray-500"
