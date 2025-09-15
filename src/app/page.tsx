@@ -70,7 +70,7 @@ export default function Home() {
           className="text-xl sm:text-3xl font-bold text-center"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
-          Todo-List
+          Lista de Tarefas
         </h1>
 
         {/* Input + Botão */}
@@ -171,7 +171,7 @@ export default function Home() {
           className="flex items-center justify-center gap-2 hover:underline hover:underline-offset-4"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
-          Criado com &#x2764;&#xFE0F; por Fridson Firmino
+          Criado com &#x2764;&#xFE0F; por Fridson Firmino.
         </a>
         <div className="flex flex-row gap-4 justify-center">
           <a
