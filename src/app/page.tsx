@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Task from "@/components/task";
 import { ModeToggle } from "@/components/toggleTheme";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Clipboard } from "lucide-react";
-import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
-import Task from "@/components/task";
+import { Clipboard } from "lucide-react";
+import { useEffect, useState } from "react";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 interface Task {
   name: string;
@@ -167,12 +167,13 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="w-full max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left mt-8 sm:mt-0">
-        <a
+        <span
           className="flex items-center justify-center gap-2 hover:underline hover:underline-offset-4"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
-          Criado com &#x2764;&#xFE0F; por Fridson Firmino
-        </a>
+          Criado com ❤️ por Fridson Firmino
+        </span>
+
         <div className="flex flex-row gap-4 justify-center">
           <a
             target="_blank"
