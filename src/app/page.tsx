@@ -126,9 +126,9 @@ export default function Home() {
           {tasks.length === 0 ? (
             <div className="flex flex-col items-center gap-3 sm:gap-4 mt-8">
               <Clipboard
-                size={60}
+                size={70}
                 color="gray"
-                className="sm:w-[82px] sm:h-[82px]"
+                // className="sm:w-[82px] sm:h-[82px]"
               />
               <h1
                 className="text-base sm:text-xl font-bold text-gray-600"
